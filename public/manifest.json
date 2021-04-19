@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Quotely",
+  "name": "A React App powered by Amplify to manage quotations, invoices, and receipts.",
   "icons": [
     {
       "src": "favicon.ico",

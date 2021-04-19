@@ -1,0 +1,30 @@
+.app-navbar {
+  background: #ffffff;
+  /* height: 6vh; */
+  padding: 1rem;
+  font-weight: 600;
+}
+
+.app-navbar ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.app-navbar ul li {
+  text-transform: capitalize;
+  margin-right: 1.5rem;
+}
+
+.app-navbar ul li.active,
+.app-navbar ul li:hover {
+  color: #1890ff;
+}
+
+.app-navbar ul li a,
+.app-navbar ul li a:active,
+.app-navbar ul li a:visited {
+  text-decoration: none;
+  color: unset;
+}

@@ -1,0 +1,27 @@
+.app-header {
+  background: #29b0c2;
+  /* height: 6vh; */
+  padding: 1rem;
+  font-weight: 600;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.app-header .brand {
+  /* text-transform: uppercase; */
+  color: #ffffff;
+}
+
+.app-header .account {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.app-header .account span.username {
+  display: inline-block;
+  margin-right: 0.5rem;
+  color: #ffffff;
+  cursor: unset;
+}
