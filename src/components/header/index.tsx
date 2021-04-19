@@ -2,11 +2,13 @@ import { appName } from '../../constants';
 import { ExclamationCircleOutlined, UserOutlined } from '@ant-design/icons';
 import './style.css';
 import { Avatar, Dropdown, Menu, Modal } from 'antd';
+import { useHistory } from 'react-router';
 // import { Auth } from 'aws-amplify';
 
 const { confirm } = Modal;
 
 const Header = ({ username }: any) => {
+  const history = useHistory();
 
   const handleSignOut = async () => {
     confirm({
@@ -15,6 +17,7 @@ const Header = ({ username }: any) => {
       content: 'Are you sure you want to Sign Out?',
       onOk() {
         // Auth.signOut();
+        history.replace('/');
       },
       onCancel() {
         console.log('Cancel');

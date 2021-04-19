@@ -1,4 +1,4 @@
-import './App.css';
+import './App.scss';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import HomePage from './pages';
 import DashboardPage from './pages/dashboard';
@@ -7,6 +7,7 @@ import QuotationsPage from './pages/quotations';
 import InvoicesPage from './pages/invoices';
 import ReceiptsPage from './pages/receipts';
 import CreateInvoicePage from './pages/invoices/create';
+import LoginPage from './pages/login';
 
 function App() {
   return (
@@ -18,6 +19,9 @@ function App() {
           </Route>
           <Route path='/dashboard'>
             <DashboardPage />
+          </Route>
+          <Route path='/login'>
+            <LoginPage />
           </Route>
           <Route path='/quotations'>
             <QuotationsPage />

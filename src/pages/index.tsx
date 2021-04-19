@@ -9,8 +9,8 @@ const HomePage = () => {
       <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
         <img src={welcomeImage} alt='' width='300' height='300' />
         <h1>Welcome to {appName}</h1>
-        <Link to='/dashboard'>
-          <Button type='primary'>DASHBOARD</Button>
+        <Link to='/login'>
+          <Button type='primary'>LOGIN</Button>
         </Link>
       </div>
     </div>
