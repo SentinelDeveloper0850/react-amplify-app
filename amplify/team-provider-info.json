@@ -35,7 +35,8 @@
         }
       },
       "auth": {
-        "reactamplifyapp8f4e0e8c": {}
+        "reactamplifyapp8f4e0e8c": {},
+        "reactamplifyapp": {}
       }
     }
   }

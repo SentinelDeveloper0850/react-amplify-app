@@ -5,22 +5,35 @@ import { Link } from 'react-router-dom';
 import { appName } from '../constants';
 import loginImage from '../images/login.svg';
 import { isValidEmail } from '../utils/validators';
+import { Auth } from 'aws-amplify';
+import { saveCognitoUser } from '../utils/auth';
 
 const LoginPage = () => {
   const history = useHistory();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
-  const handleLoginClick = () => {
+  async function signIn() {
+    const username = email;
+    try {
+      const user = await Auth.signIn(username, password);
+      
+      saveCognitoUser(user);
+      history.replace('/dashboard');
+      
+    } catch (error) {
+      console.log('error signing in', error);
+      message.error(error.message);
+    }
+  }
 
+  const handleLoginClick = () => {
     if (!isValidEmail(email)) {
       message.error('A valid email address is required');
     } else if (password === '') {
       message.error('A password is required');
     } else {
-      // TODO: Authenticate user
-      // TODO: Create session
-      history.replace('/dashboard');
+      signIn();
     }
   };
 
