@@ -8,6 +8,11 @@ import InvoicesPage from './pages/invoices';
 import ReceiptsPage from './pages/receipts';
 import CreateInvoicePage from './pages/invoices/create';
 import LoginPage from './pages/login';
+import Amplify from 'aws-amplify';
+import awsconfig from './aws-exports';
+import RegisterPage from './pages/register';
+
+Amplify.configure(awsconfig);
 
 function App() {
   return (
@@ -22,6 +27,9 @@ function App() {
           </Route>
           <Route path='/login'>
             <LoginPage />
+          </Route>
+          <Route path='/register'>
+            <RegisterPage />
           </Route>
           <Route path='/quotations'>
             <QuotationsPage />

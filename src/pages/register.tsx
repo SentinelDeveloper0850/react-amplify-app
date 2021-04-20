@@ -3,13 +3,14 @@ import { useState } from 'react';
 import { useHistory } from 'react-router';
 import { Link } from 'react-router-dom';
 import { appName } from '../constants';
-import loginImage from '../images/login.svg';
+import registerImage from '../images/register.svg';
 import { isValidEmail } from '../utils/validators';
 
-const LoginPage = () => {
+const RegisterPage = () => {
   const history = useHistory();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [confirmPassword, setConfirmPassword] = useState('');
 
   const handleLoginClick = () => {
 
@@ -17,19 +18,27 @@ const LoginPage = () => {
       message.error('A valid email address is required');
     } else if (password === '') {
       message.error('A password is required');
+    } else if (confirmPassword !== password) {
+      message.error('Passwords do not match');
     } else {
-      // TODO: Authenticate user
-      // TODO: Create session
-      history.replace('/dashboard');
+      // TODO: Create user account
+      history.replace('/login');
     }
   };
 
   return (
     <div style={{ width: '100%', height: '80vh', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-      <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
+      <img src={registerImage} alt='' width='400' height='400' />
+      <div
+        style={{
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'center',
+          alignItems: 'center',
+          marginLeft: '5rem',
+        }}>
         <h1>Welcome to {appName}</h1>
-        <img src={loginImage} alt='' width='300' height='300' />
-        <h3>Sign in to your account</h3>
+        <h3>Create an account</h3>
         <Form layout='vertical' style={{ width: '100%', marginTop: '1rem', textAlign: 'center' }}>
           <Form.Item label='Email Address'>
             <Input
@@ -47,11 +56,19 @@ const LoginPage = () => {
               onChange={({ target }) => setPassword(target.value)}
             />
           </Form.Item>
+          <Form.Item label='Confirm Password'>
+            <Input
+              type='password'
+              placeholder='*****'
+              value={confirmPassword}
+              onChange={({ target }) => setConfirmPassword(target.value)}
+            />
+          </Form.Item>
           <Button type='primary' block style={{ marginBottom: '1rem' }} onClick={handleLoginClick}>
-            SIGN IN
+            SIGN UP
           </Button>
-          <Link to='/register'>
-            <span>No account? Sign up here</span>
+          <Link to='/login'>
+            <span>Already have an account? Sign in</span>
           </Link>
         </Form>
       </div>
@@ -59,4 +76,4 @@ const LoginPage = () => {
   );
 };
 
-export default LoginPage;
+export default RegisterPage;
