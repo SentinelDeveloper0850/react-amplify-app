@@ -1,0 +1,16 @@
+type QuoteItem {
+  id: ID!
+  name: String!
+  quantity: Int!
+  rate: Float!
+  isTaxable: Boolean!
+  total: Float!
+}
+
+type Quotation @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  description: String!
+  expiresOn: String!
+  total: Float!
+  quotedItems: [QuoteItem]
+}

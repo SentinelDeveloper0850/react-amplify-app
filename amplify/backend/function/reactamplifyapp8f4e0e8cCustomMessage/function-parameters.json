@@ -1,0 +1,26 @@
+{
+  "trigger": true,
+  "modules": [
+    "verification-link"
+  ],
+  "parentResource": "reactamplifyapp8f4e0e8c",
+  "functionName": "reactamplifyapp8f4e0e8cCustomMessage",
+  "resourceName": "reactamplifyapp8f4e0e8cCustomMessage",
+  "parentStack": "auth",
+  "triggerEnvs": [
+    {
+      "key": "RESOURCENAME",
+      "value": "resourceName"
+    }
+  ],
+  "triggerDir": "C:\\Users\\given\\AppData\\Roaming\\npm\\node_modules\\@aws-amplify\\cli\\node_modules\\amplify-category-auth\\provider-utils\\awscloudformation\\triggers\\CustomMessage",
+  "triggerTemplate": "CustomMessage.json.ejs",
+  "triggerEventPath": "CustomMessage.event.json",
+  "roleName": "reactamplifyapp8f4e0e8cCustomMessage",
+  "skipEdit": true,
+  "REDIRECTURL": "'/login'",
+  "EMAILSUBJECT": "'Quotely - Account Confirmation'",
+  "EMAILMESSAGE": "'Click the link below to confirm your account'",
+  "RESOURCENAME": "resourceName",
+  "enableCors": false
+}

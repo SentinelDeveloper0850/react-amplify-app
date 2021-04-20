@@ -1,0 +1,42 @@
+{
+  "staging": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-amplify7a1ecd5f0d474-staging-230838-authRole",
+      "UnauthRoleArn": "arn:aws:iam::023104597150:role/amplify-amplify7a1ecd5f0d474-staging-230838-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::023104597150:role/amplify-amplify7a1ecd5f0d474-staging-230838-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-amplify7a1ecd5f0d474-staging-230838-deployment",
+      "UnauthRoleName": "amplify-amplify7a1ecd5f0d474-staging-230838-unauthRole",
+      "StackName": "amplify-amplify7a1ecd5f0d474-staging-230838",
+      "StackId": "arn:aws:cloudformation:us-east-1:023104597150:stack/amplify-amplify7a1ecd5f0d474-staging-230838/2cdc78e0-a164-11eb-a3ce-1291290b94c1",
+      "AmplifyAppId": "d1zohhaltg5dhj"
+    },
+    "categories": {
+      "function": {
+        "reactamplifyapp8f4e0e8cDefineAuthChallenge": {
+          "deploymentBucketName": "amplify-amplify7a1ecd5f0d474-staging-230838-deployment",
+          "s3Key": "amplify-builds/reactamplifyapp8f4e0e8cDefineAuthChallenge-724e4862756734507136-build.zip"
+        },
+        "reactamplifyapp8f4e0e8cCreateAuthChallenge": {
+          "deploymentBucketName": "amplify-amplify7a1ecd5f0d474-staging-230838-deployment",
+          "s3Key": "amplify-builds/reactamplifyapp8f4e0e8cCreateAuthChallenge-4f666853706c377a6953-build.zip"
+        },
+        "reactamplifyapp8f4e0e8cVerifyAuthChallengeResponse": {
+          "RECAPTCHASECRET": "",
+          "deploymentBucketName": "amplify-amplify7a1ecd5f0d474-staging-230838-deployment",
+          "s3Key": "amplify-builds/reactamplifyapp8f4e0e8cVerifyAuthChallengeResponse-756d3959677837696f70-build.zip"
+        },
+        "reactamplifyapp8f4e0e8cCustomMessage": {
+          "REDIRECTURL": "'/login'",
+          "EMAILSUBJECT": "'Quotely - Account Confirmation'",
+          "EMAILMESSAGE": "'Click the link below to confirm your account'",
+          "deploymentBucketName": "amplify-amplify7a1ecd5f0d474-staging-230838-deployment",
+          "s3Key": "amplify-builds/reactamplifyapp8f4e0e8cCustomMessage-3044764a574b61566d52-build.zip"
+        }
+      },
+      "auth": {
+        "reactamplifyapp8f4e0e8c": {}
+      }
+    }
+  }
+}
